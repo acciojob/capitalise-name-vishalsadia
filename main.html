@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-    Enter your name: <input type="text" id="fname">
-	
-	<script type="text/javascript" src="./script.js">
-	</script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalise Name</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the input field by its id
+            var inputField = document.getElementById("fname");
+
+            // Add an event listener to the input field
+            inputField.addEventListener("blur", function() {
+                // Convert the content to uppercase when the input field loses focus
+                inputField.value = inputField.value.toUpperCase();
+            });
+        });
+    </script>
+</head>
+<body>
+    <label for="fname">Enter your name:</label>
+    <!-- Use the provided id "fname" for the input field -->
+    <input type="text" id="fname" name="fname">
+</body>
 </html>
